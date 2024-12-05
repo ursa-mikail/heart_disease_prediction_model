@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Heart Disease Prediction</title>
+</head>
+<body>
+    <h1>Heart Disease Prediction</h1>
+    <form action="/predict" method="post">
+        <label for="age">Age:</label>
+        <input type="text" id="age" name="age"><br><br>
+        
+        <label for="sex">Sex (1 = Male, 0 = Female):</label>
+        <input type="text" id="sex" name="sex"><br><br>
+        
+        <label for="chest_pain">Chest Pain Type (0-3):</label>
+        <input type="text" id="chest_pain" name="chest_pain"><br><br>
+        
+        <label for="resting_bp">Resting Blood Pressure:</label>
+        <input type="text" id="resting_bp" name="resting_bp"><br><br>
+        
+        <label for="cholesterol">Cholesterol:</label>
+        <input type="text" id="cholesterol" name="cholesterol"><br><br>
+        
+        <label for="fasting_bs">Fasting Blood Sugar (1 = True, 0 = False):</label>
+        <input type="text" id="fasting_bs" name="fasting_bs"><br><br>
+        
+        <label for="resting_ecg">Resting ECG (0-2):</label>
+        <input type="text" id="resting_ecg" name="resting_ecg"><br><br>
+        
+        <label for="max_hr">Max Heart Rate:</label>
+        <input type="text" id="max_hr" name="max_hr"><br><br>
+        
+        <label for="exercise_angina">Exercise Induced Angina (1 = Yes, 0 = No):</label>
+        <input type="text" id="exercise_angina" name="exercise_angina"><br><br>
+        
+        <label for="oldpeak">Oldpeak:</label>
+        <input type="text" id="oldpeak" name="oldpeak"><br><br>
+        
+        <label for="st_slope">ST Slope (0-2):</label>
+        <input type="text" id="st_slope" name="st_slope"><br><br>
+        
+        <input type="submit" value="Predict">
+    </form>
+    
+    {% if prediction_text %}
+        <h2>{{ prediction_text }}</h2>
+    {% endif %}
+</body>
+</html>
