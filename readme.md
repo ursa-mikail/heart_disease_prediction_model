@@ -1,14 +1,14 @@
 # Heart Disease Prediction Model
 ## Project Structure
 Ensure your project directory is structured as follows:
-
+```
 heart_disease_prediction_model/
 ├── app.py
 ├── sample_data/
 │   └── heart_statlog_cleveland_hungary_final.csv
 └── templates/
     ├── index.html
-
+```
 ### Files and Directories
 app.py: The main Flask application file.
 sample_data/: Directory containing the dataset.
