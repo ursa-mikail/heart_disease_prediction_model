@@ -63,7 +63,7 @@ model = mlp_cl
 tf.keras.utils.plot_model(model, show_shapes=True, expand_nested=True, show_dtype=True)
 ```
 
-<img src="model.png" alt="model" width="500" height="600">
+<img src="model.png" alt="model" width="200" height="200">
 
 ```
 import datetime
