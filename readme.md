@@ -57,3 +57,31 @@ Index(['age', 'sex', 'chest pain type', 'resting bp s', 'cholesterol',
        'exercise angina', 'oldpeak', 'ST slope', 'target'],
       dtype='object')
 ```
+
+```
+model = mlp_cl
+tf.keras.utils.plot_model(model, show_shapes=True, expand_nested=True, show_dtype=True)
+```
+
+![model](model.png)
+
+
+```
+import datetime
+
+log_dir = "logs/fit/" + datetime.datetime.now().strftime("%Y%m%d-%H%M%S")
+tensorboard_callback = tf.keras.callbacks.TensorBoard(log_dir=log_dir, histogram_freq=1)
+
+history = mlp_cl.fit(X_train, y_train, epochs=100, validation_split=0.2, verbose=2, callbacks=[tensorboard_callback])
+
+#!pip install tensorboard
+%load_ext tensorboard
+%tensorboard --logdir logs
+%tensorboard --logdir logs/func
+# ref: https://www.tensorflow.org/tensorboard/graphs
+
+#import tensorflow as tf; print(tf.__version__)
+#import tensorboard; print(tensorboard.__version__)
+```
+![tensorboard](tensorboard.png)
+
